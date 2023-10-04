@@ -46,7 +46,7 @@ ratio = 2
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-Im_path = "/kaggle/input/deep-dream-data/sky.jpeg"
+Im_path = "data/Original_images/sky.jpeg"
 image = np.array(Image.open(Im_path))
 image = cv.resize(image, (IMAGE_HEIGHT, IMAGE_WIDTH))
 model = Vgg16(layer_id).to(device=DEVICE)
